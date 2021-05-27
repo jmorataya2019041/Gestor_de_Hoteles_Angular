@@ -46,4 +46,9 @@ export class AdminHotelService {
 
      return this._http.delete(this.url + '/deleteRoom/' + id, {headers: headersToken})
    }
+
+   //Función para obtener las reservaciones de un usuario
+   reservationOfUser(id: String): Observable<any>{
+     return this._http.get(this.url + '/reservationsUser/' + id, {headers: this.header})
+   }
 }

@@ -8,6 +8,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usuario.component';
 import { ReservationForUserComponent } from './componentes/reservation-for-user/reservation-for-user.component';
 import { ReservationTypeComponent } from './componentes/reservation-type/reservation-type.component';
+import { ReservationsOfUserComponent } from './componentes/reservations-of-user/reservations-of-user.component';
 import { RoomForHotelComponent } from './componentes/room-for-hotel/room-for-hotel.component';
 import { RoomForReservationComponent } from './componentes/room-for-reservation/room-for-reservation.component';
 import { ServiceInReservationComponent } from './componentes/service-in-reservation/service-in-reservation.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'addReservation', component: AddReservationComponent},
   {path: 'reservation-for-user/:idUser', component: ReservationForUserComponent},
   {path: 'room-for-reservation/:idReservation', component: RoomForReservationComponent},
+  {path: 'reservationOfUser/:idUser', component: ReservationsOfUserComponent},
   {path: '**', component: LoginComponent}
 ];
 

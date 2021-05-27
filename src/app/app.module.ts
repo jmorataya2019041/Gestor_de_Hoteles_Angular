@@ -23,6 +23,7 @@ import { EventosComponent } from './componentes/eventos/eventos.component';
 import { AddReservationComponent } from './componentes/add-reservation/add-reservation.component';
 import { ReservationForUserComponent } from './componentes/reservation-for-user/reservation-for-user.component';
 import { RoomForReservationComponent } from './componentes/room-for-reservation/room-for-reservation.component';
+import { ReservationsOfUserComponent } from './componentes/reservations-of-user/reservations-of-user.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { RoomForReservationComponent } from './componentes/room-for-reservation/
     EventosComponent,
     AddReservationComponent,
     ReservationForUserComponent,
-    RoomForReservationComponent
+    RoomForReservationComponent,
+    ReservationsOfUserComponent
   ],
   imports: [
     BrowserModule,
