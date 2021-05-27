@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-7">
-      <button class="btn btn-outline-dark" *ngIf="_usuarioService.getIdentidad().rol === 'Admin_Hotel' " data-bs-toggle="modal" data-bs-target="#agregarHabitación"><i class="bi bi-door-closed-fill"></i>
+      <button class="btn btn-outline-dark" *ngIf="_usuarioService.getIdentidad()._id === hotel.admin._id" data-bs-toggle="modal" data-bs-target="#agregarHabitación"><i class="bi bi-door-closed-fill"></i>
         Agregar Habitación
       </button>
       <form>
@@ -23,7 +23,7 @@
               <th scope="col">Código de Habitación</th>
               <th scope="col">Precio</th>
               <th scope="col">Disponibilidad</th>
-              <th scope="col" *ngIf="_usuarioService.getIdentidad().rol === 'Admin_Hotel'">Acciones</th>
+              <th scope="col" *ngIf="_usuarioService.getIdentidad()._id === hotel.admin._id">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -38,10 +38,10 @@
                   No Disponible
                 </button>
               </td>
-              <td *ngIf="_usuarioService.getIdentidad().rol === 'Admin_Hotel'">
+              <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-primary" (click)="obtenerHabitacion(room._id)" data-bs-toggle="modal" data-bs-target="#editarHabitación"><i class="bi bi-pencil-square"></i> Editar</button>
-                  <button type="button" class="btn btn-primary" (click)="obtenerHabitacion(room._id)" data-bs-toggle="modal" data-bs-target="#eliminarHabitación"><i class="bi bi-trash"></i> Eliminar</button>
+                  <button type="button" class="btn btn-primary" (click)="obtenerHabitacion(room._id)" *ngIf="_usuarioService.getIdentidad()._id === hotel.admin._id" data-bs-toggle="modal" data-bs-target="#editarHabitación"><i class="bi bi-pencil-square"></i> Editar</button>
+                  <button type="button" class="btn btn-primary" (click)="obtenerHabitacion(room._id)" *ngIf="_usuarioService.getIdentidad()._id === hotel.admin._id" data-bs-toggle="modal" data-bs-target="#eliminarHabitación"><i class="bi bi-trash"></i> Eliminar</button>
                 </div>
               </td>
           </tbody>

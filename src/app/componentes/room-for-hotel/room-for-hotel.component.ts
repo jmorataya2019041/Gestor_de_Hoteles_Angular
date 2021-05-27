@@ -25,11 +25,10 @@ export class RoomForHotelComponent implements OnInit {
   public getHoteles;
 
   constructor(public _usuarioService: UsuarioService, public _adminAppService: AdminAppService, public _adminHotelService: AdminHotelService, public _activatedRoute: ActivatedRoute) {
-    this.habitacionModel = new Habitacion("","",null,null,""),
     this.getEventos = new Evento("","","");
     this.hotel = new Hotel("","","","")
     this.habitacionGetId = new Habitacion("","",null, null,"")
-    this.habitacionAdd = new Habitacion("","",null, null,"")
+    this.habitacionAdd = new Habitacion("","",0,true,"")
   }
 
   ngOnInit(): void {
